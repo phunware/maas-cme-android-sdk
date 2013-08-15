@@ -1,4 +1,4 @@
-maas-cms-android-sdk
-====================
+#Mobile as a Service
 
-MaaS CMS SDK for Android
+**v 1.0.0**
+________________
