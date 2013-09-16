@@ -1,10 +1,13 @@
 MaaSCMS Android SDK
 ================
 
-Version 1.0.0
+Version 1.0.1
 
-This is the iOS SDK for the MaaS Content Management System module. Visit http://maas.phunware.com/ for more details and to sign up.
+This is the Android SDK for the MaaS Content Management System module. Visit http://maas.phunware.com/ for more details and to sign up.
 
+Release Notes:
+- Fixed content request methods.
+- Some methods have been deprecated. Please see javadocs for more details.
 
 
 Getting Started
