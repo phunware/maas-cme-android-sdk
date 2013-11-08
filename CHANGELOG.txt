@@ -1,3 +1,11 @@
-##1.0.3 (Tuesday, September 24th, 2013) 
+CME Change Log
+==========
+
+Version 1.0.4 *(2013-11-08)*
+----------------------------
+ * Added the ability to retrieve all structures by traversing all children of container.
+
+Version 1.0.3 *(2013-09-24)*
+----------------------------
  * Removed deprecated methods.
  * Added getContent that takes a structureId.
