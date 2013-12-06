@@ -1,6 +1,11 @@
 CME Change Log
 ==========
 
+Version 1.1.0 *(2013-12-06)*
+----------------------------
+ * Cleaned up code
+ * Re-branded code from CMS to CME
+
 Version 1.0.5 *(2013-11-23)*
 ----------------------------
  * Fixed encoding bug with unicode (special) characters.
