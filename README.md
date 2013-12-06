@@ -1,14 +1,14 @@
 MaaSCMS Android SDK
 ================
 
-Version 1.0.4
+Version 1.1.0
 
 This is the Android SDK for the MaaS Content Management System module. Visit http://maas.phunware.com/ for more details and to sign up.
 
 Getting Started
 ---------------
 
-- [Download MaaSCMS](https://github.com/phunware/maas-cms-android-sdk/archive/master.zip) and run the included sample app.
+- [Download MaaSCME](https://github.com/phunware/maas-cms-android-sdk/archive/master.zip) and run the included sample app.
 - Continue reading below for installation and integration instructions.
 - Be sure to read the [documentation](http://phunware.github.io/maas-cms-android-sdk/) for additional details.
 
@@ -22,10 +22,7 @@ The following libraries are required:
 MaaSCore.jar
 ````
 
-MaaSCMS has a dependency on MaaSCore.jar which is available here: https://github.com/phunware/maas-core-android-sdk
-
-It's recommended that you add the MaaS libraries to the 'libs' directory. This directory should contain MaaSCore.jar and MaaSCMS.jar  as well as any other MaaS libraries that you are using.
-
+MaaSCME has a dependency on MaaSCore.jar which is available here: https://github.com/phunware/maas-core-android-sdk
 
 
 Documentation
@@ -38,7 +35,7 @@ Documentation is included in the Documents folder in the repository as both HTML
 Overview
 -----------
 
-The MaaSCMS SDK allows developers to fetch and manage the various pieces of data in the Content Management System including containers, schemas, structure, and content. The CMS spans across your entire organization so different applications can potentially share the same content.
+The MaaSCME SDK allows developers to fetch and manage the various pieces of data in the Content Management System including containers, schemas, structure, and content. The CME spans across your entire organization so different applications can potentially share the same content.
 
 
 ### Container
@@ -62,14 +59,14 @@ The structure of the **Content** object relies completely on the layout of struc
 Integration
 -----------
 
-The primary methods in MaaSCMS revolve fetching, creating, updating, and deleting content. You can also get structures, containers, and schemas.
+The primary methods in MaaSCME revolve fetching, creating, updating, and deleting content. You can also get structures, containers, and schemas.
 
 ### Getting Content
 
 ````java
 	// Get a specific piece of content for the specified context, container ID, and content ID. 
 	// The contents are always returned a JSONObject. It's recommended that you parse the JSONObject into a model object.
-    JSONObject content = PwCMSModule.getContent(this, containerId, contentId);
+    JSONObject content = PwCMEModule.getContent(this, containerId, contentId);
 
 ````
 
@@ -78,7 +75,7 @@ The primary methods in MaaSCMS revolve fetching, creating, updating, and deletin
 ````java
 	// Update content for the specified content ID, container ID, and structure ID. 
 	// Any fields that are ommitted will maintain their previous values.
-	  PwCMSModule.updateContent(this, contentId, newContent, structureId);
+	  PwCMEModule.updateContent(this, contentId, newContent, structureId);
 ````
 
 ### Creating Content
@@ -89,22 +86,22 @@ The primary methods in MaaSCMS revolve fetching, creating, updating, and deletin
 	// If not, the required fields will be created for you with empty values.
 	
 	  // Required parent content ID for new content that needs to be link up to any dynamic children of a structure item. 
-    PwCMSModule.addContent(this, containerId, structureId, parentId, data);
+    PwCMEModule.addContent(this, containerId, structureId, parentId, data);
     or
     // If no parent content exists then parent content ID is not required. 
     // Otherwise, use above method to properly link up child elements.
-    PwCMSModule.addContent(this, containerId, structureId, data);
+    PwCMEModule.addContent(this, containerId, structureId, data);
 ````
 
 ### Deleting Content
 
 ````java
 	// Delete content for the specified content ID as well as all content children
-    PwCMSModule.deleteContent(this, contentId, traverse);   
+    PwCMEModule.deleteContent(this, contentId, traverse);
     
     or
   // Delete all content children for the specified content ID
-    PwCMSModule.deleteContentAllChildren(context, contentId);
+    PwCMEModule.deleteContentAllChildren(context, contentId);
 
 ````
 
@@ -112,13 +109,13 @@ The primary methods in MaaSCMS revolve fetching, creating, updating, and deletin
 
 ````java
 	// Fetch all containers
-    PwContainers containers = PwCMSModule.getContainers(this);
+    PwContainers containers = PwCMEModule.getContainers(this);
     
   // Fetch a specific container item
-    PwContainer container = PwCMSModule.getContainer(this, containerId);
+    PwContainer container = PwCMEModule.getContainer(this, containerId);
     
   // Get an array of containers that match an array of tags
-    PwContainers containers = PwCMSModule.getContainers(this, anyTags, allTags);
+    PwContainers containers = PwCMEModule.getContainers(this, anyTags, allTags);
 
 ````
 
@@ -126,13 +123,13 @@ The primary methods in MaaSCMS revolve fetching, creating, updating, and deletin
 
 ````java
   // Fetch all schemas
-    PwSchemas schemas = PwCMSModule.getSchemas(this);
+    PwSchemas schemas = PwCMEModule.getSchemas(this);
     
   // Fetch a specific schema item
-    PwSchema schema = PwCMSModule.getSchema(this, schemaId);
+    PwSchema schema = PwCMEModule.getSchema(this, schemaId);
     
   // Get an array of schemas that match an array of tags
-    PwSchemas schemas = PwCMSModule.getSchemas(this, anyTags, allTags);
+    PwSchemas schemas = PwCMEModule.getSchemas(this, anyTags, allTags);
 ````
 
 ### Structure
@@ -141,17 +138,10 @@ The primary methods in MaaSCMS revolve fetching, creating, updating, and deletin
   // Get a structure with the specified stucture and container ID. 
   // In this example we want to traverse into all child structures but not include schema.
     withSchema = false;
-    PwStructure structure = PwCMSModule.getStructure(this, structureId, containerId, depth, withSchema);
+    PwStructure structure = PwCMEModule.getStructure(this, structureId, containerId, depth, withSchema);
     
   // Get an structures object containing an array of structures for the specified container ID. 
   // In this example we want to traverse into all child structures and include schema.
     withSchema = true;
-    PwStructures structures = PwCMSModule.getStructures(this, containerId, depth, withSchema);
+    PwStructures structures = PwCMEModule.getStructures(this, containerId, depth, withSchema);
 ````
-
-
-
-Requirements
-------------
-
-- MaaSCore v1.0.0 or greater.
