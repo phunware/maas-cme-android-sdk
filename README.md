@@ -1,9 +1,9 @@
-MaaSCME Android SDK
+MaaS Content Management Android SDK
 ================
 
 Version 1.1.0
 
-This is the Android SDK for the MaaS Content Management Engine module. Visit http://maas.phunware.com/ for more details and to sign up.
+This is the Android SDK for the MaaS Content Management module. Visit http://maas.phunware.com/ for more details and to sign up.
 
 Getting Started
 ---------------
@@ -22,7 +22,7 @@ The following libraries are required:
 MaaSCore.jar
 ````
 
-MaaSCME has a dependency on MaaSCore.jar which is available here: https://github.com/phunware/maas-core-android-sdk
+MaaS Content Management has a dependency on MaaSCore.jar which is available here: https://github.com/phunware/maas-core-android-sdk
 
 
 Documentation
