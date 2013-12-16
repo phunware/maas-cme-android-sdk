@@ -5,6 +5,8 @@ Version 1.1.0
 
 This is the Android SDK for the MaaS Content Management module. Visit http://maas.phunware.com/ for more details and to sign up.
 
+
+
 Getting Started
 ---------------
 
@@ -23,6 +25,7 @@ MaaSCore.jar
 ````
 
 MaaS Content Management has a dependency on MaaSCore.jar which is available here: https://github.com/phunware/maas-core-android-sdk
+
 
 
 Documentation
@@ -67,7 +70,6 @@ The primary methods in MaaSCME revolve fetching, creating, updating and deleting
 	// Get a specific piece of content for the specified context, container ID and content ID. 
 	// The contents are always returned a JSONObject. It's recommended that you parse the JSONObject into a model object.
     JSONObject content = PwCMEModule.getContent(this, containerId, contentId);
-
 ````
 
 ### Updating Content
@@ -102,7 +104,6 @@ The primary methods in MaaSCME revolve fetching, creating, updating and deleting
     or
   // Delete all content children for the specified content ID
     PwCMEModule.deleteContentAllChildren(context, contentId);
-
 ````
 
 ### Containers
@@ -116,7 +117,6 @@ The primary methods in MaaSCME revolve fetching, creating, updating and deleting
     
   // Get an array of containers that match an array of tags.
     PwContainers containers = PwCMEModule.getContainers(this, anyTags, allTags);
-
 ````
 
 ### Schemas
