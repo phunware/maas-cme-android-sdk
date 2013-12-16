@@ -8,7 +8,7 @@ This is the Android SDK for the MaaS Content Management module. Visit http://maa
 Getting Started
 ---------------
 
-- [Download MaaSCME](https://github.com/phunware/maas-cms-android-sdk/archive/master.zip) and run the included sample app.
+- [Download MaaS Content Management](https://github.com/phunware/maas-cms-android-sdk/archive/master.zip) and run the included sample app.
 - Continue reading below for installation and integration instructions.
 - Be sure to read the [documentation](http://phunware.github.io/maas-cms-android-sdk/) for additional details.
 
@@ -28,7 +28,7 @@ MaaS Content Management has a dependency on MaaSCore.jar which is available here
 Documentation
 ------------
 
-Documentation is included in the Documents folder in the repository as both HTML and as a .jar. You can also find the latest documentation here: http://phunware.github.io/maas-cms-android-sdk/
+Documentation is included in the Documents folder in the repository as both HTML and as a .jar. You can also find the latest documentation here: http://phunware.github.io/maas-content-management-android-sdk/
 
 
 
