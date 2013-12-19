@@ -1,4 +1,4 @@
-MaaS Content Management Android SDK
+MaaS Content Management SDK for Android
 ================
 
 Version 1.1.0
