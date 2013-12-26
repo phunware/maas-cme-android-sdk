@@ -38,16 +38,16 @@ Documentation is included in the Documents folder in the repository as both HTML
 Overview
 -----------
 
-The MaaSCME SDK allows developers to fetch and manage the various pieces of data in the Content Management Engine, including containers, schemas, structure and content. The CME spans across your entire organization, so different applications can potentially share the same content.
+The MaaS Content Management SDK allows developers to fetch and manage the various pieces of data in the Content Management Engine, including containers, schemas, structure and content. MaaS Content Management spans across your entire organization, so different applications can potentially share the same content.
 
 
 ### Container
 
-**Containers** hold a single structure. You can create any number of containers in MaaS Portal. You can also associate tags with containers to assist with fetching.
+**Containers** hold a single structure. You can create any number of containers in the MaaS portal. You can also associate tags with containers to assist with fetching.
 
 ### Schema
 
-**Schemas** are applied to **Structure** items and define what fields of data a particular structure item can contain.. You can create any number of schemas in MaaS Portal. You can also associate tags with schemas to assist with fetching.
+**Schemas** are applied to **Structure** items and define what fields of data a particular structure item can contain.. You can create any number of schemas in the MaaS portal. You can also associate tags with schemas to assist with fetching.
 
 ### Structure
 
@@ -62,7 +62,7 @@ The structure of the **Content** object relies completely on the layout of struc
 Integration
 -----------
 
-The primary methods in MaaSCME revolve fetching, creating, updating and deleting content. You can also get structures, containers and schemas.
+The primary methods in MaaS Content Management revolve fetching, creating, updating and deleting content. You can also get structures, containers and schemas.
 
 ### Getting Content
 
