@@ -12,7 +12,7 @@ Getting Started
 
 - [Download MaaS Content Management](https://github.com/phunware/maas-cms-android-sdk/archive/master.zip) and run the included sample app.
 - Continue reading below for installation and integration instructions.
-- Be sure to read the [documentation](http://phunware.github.io/maas-cms-android-sdk/) for additional details.
+- Be sure to read the [documentation](http://phunware.github.io/maas-content-management-android-sdk/) for additional details.
 
 
 
