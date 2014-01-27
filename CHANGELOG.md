@@ -1,9 +1,10 @@
 CME Change Log
 ==========
 
-Version 1.1.1 *(2014-01-27)*
+Version 1.1.2 *(2014-01-27)*
 ----------------------------
- * getSchemas allows an input of a limit and offset. The default limit is 100.
+ * getSchemas allows an input of a limit and offset. The default limit is 10.
+ * PwSchemas now includes a PwPagination object to help use pagination logic.
 
 Version 1.1.0 *(2013-12-06)*
 ----------------------------
