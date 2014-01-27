@@ -1,6 +1,10 @@
 CME Change Log
 ==========
 
+Version 1.1.1 *(2014-01-27)*
+----------------------------
+ * getSchemas allows an input of a limit and offset. The default limit is 100.
+
 Version 1.1.0 *(2013-12-06)*
 ----------------------------
  * Cleaned up code
