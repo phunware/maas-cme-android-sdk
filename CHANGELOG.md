@@ -1,6 +1,11 @@
 CME Change Log
 ==========
 
+Version 1.1.3 *(2014-02-26)*
+----------------------------
+ * Fixed builds to produce Java 6 compatible binaries using 'sourceCompatibility' and 'targetCompatibility' equal to '1.6'.
+ * Requires MaaSCore v1.3.5
+
 Version 1.1.2 *(2014-01-27)*
 ----------------------------
  * getSchemas allows an input of a limit and offset. The default limit is 10.
