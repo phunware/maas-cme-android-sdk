@@ -6,6 +6,13 @@ Version 1.1.3
 This is the Android SDK for the MaaS Content Management module. Visit http://maas.phunware.com/ for more details and to sign up.
 
 
+Requirements
+------------
+
+* Android SDK 2.2+ (API level 8) or above
+* Android Target 4.1.1.4
+* Android Support v4 18.0.+
+
 
 Getting Started
 ---------------
