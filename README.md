@@ -1,7 +1,7 @@
 MaaS Content Management SDK for Android
 ================
 
-Version 1.1.3
+Version 1.1.4
 
 This is Phunware's Android SDK for the Content Management module. Visit http://maas.phunware.com/ for more details and to sign up.
 
@@ -9,7 +9,7 @@ Requirements
 ------------
 
 * Android SDK 2.2+ (API level 8) or above
-* Android Target 4.1.1.4
+* Android Target 4.4.2
 * Android Support v4 18.0.+
 
 
@@ -27,10 +27,10 @@ Installation
 
 The following libraries are required:
 ````
-MaaSCore.jar
+PWCore.jar
 ````
 
-MaaS Content Management has a dependency on MaaSCore.jar, which is available here: https://github.com/phunware/maas-core-android-sdk
+MaaS Content Management has a dependency on PWCore.jar, which is available here: https://github.com/phunware/maas-core-android-sdk
 
 
 

@@ -1,6 +1,11 @@
 CME Change Log
 ==========
 
+Version 1.1.4 *(2015-09-30)*
+----------------------------
+ * Change phunware.com endpoints to HTTPS
+ * Rename the lib from MaaSCMS.jar to PWCME.jar
+ 
 Version 1.1.3 *(2014-02-26)*
 ----------------------------
  * Fixed builds to produce Java 6 compatible binaries using 'sourceCompatibility' and 'targetCompatibility' equal to '1.6'.
