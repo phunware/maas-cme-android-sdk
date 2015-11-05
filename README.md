@@ -67,7 +67,7 @@ The structure of the **content** object relies completely on the layout of struc
 
 Integration
 -----------
-### installing CME module to core
+### Installing CME module to core
 
 Before trying to use the CME it has to be added to the CoreSession as a module.
 
