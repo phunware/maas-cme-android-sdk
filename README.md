@@ -69,14 +69,14 @@ Integration
 -----------
 ### Installing CME module to core
 
-Before trying to use the CME it has to be added to the CoreSession as a module.
+Before using the CME it has to be added to the CoreSession as a module.
 
 ````java
-// This is included in the onCreate of application.
+// This is usually included in the onCreate() of application.
    PwCoreSession.getInstance().installModules(PwCMEModule.getInstance());
 ````
 
-### Registering the keys with CME
+### Registering the keys for Core module. If you have not already registered the keys for Core, then do so.
 ````java
 //Register the Appid,accesskey,signatureKey and ecryption Key.
 PwCoreSession.getInstance().registerKeys(context, Appid, Accesskey,
