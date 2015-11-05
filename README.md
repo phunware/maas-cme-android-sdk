@@ -67,7 +67,22 @@ The structure of the **content** object relies completely on the layout of struc
 
 Integration
 -----------
+### installing CME module to core
 
+Before trying to use the CME it has to be added to the CoreSession as a module.
+
+````java
+// This is included in the onCreate of application.
+   PwCoreSession.getInstance().installModules(PwCMEModule.getInstance());
+````
+
+### Registering the keys with CME
+````java
+//Register the Appid,accesskey,signatureKey and ecryption Key.
+PwCoreSession.getInstance().registerKeys(context, Appid, Accesskey,
+				Signaturekey, Encryptionkey);
+PwCMEModule.getInstance().setModuleHttpCacheTtl(DEFAULT_HTTP_CACHE_TTL);
+````
 The primary methods in MaaS Content Management revolve fetching, creating, updating and deleting content. You can also get structures, containers and schemas.
 
 ### Getting Content
