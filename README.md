@@ -1,16 +1,14 @@
 MaaS Content Management SDK for Android
 ================
 
-Version 1.1.4
+Version 1.1.5
 
 This is Phunware's Android SDK for the Content Management module. Visit http://maas.phunware.com/ for more details and to sign up.
 
 Requirements
 ------------
 
-* Android SDK 2.2+ (API level 8) or above
-* Android Target 4.4.2
-* Android Support v4 18.0.+
+* Android SDK 4.0.3+ (API level 15) or above
 
 
 Getting Started
@@ -24,27 +22,43 @@ Getting Started
 
 Installation
 ------------
+Add the following to your `repositories` tag in your top level `build.gradle` file.
 
-The following libraries are required:
-````
-PWCore.jar
-````
+```XML
+projects {
+  repositories {
+    ...
+    maven {
+        url "https://nexus.phunware.com/content/groups/phunware-core/"
+    }
+    ...
+  }
+}
+```
 
-MaaS Content Management has a dependency on PWCore.jar, which is available here: https://github.com/phunware/maas-core-android-sdk
+In the `dependencies` tag in your app's `build.gradle`,  add the following line:
+
+```XML
+dependencies {
+  ...
+  compile 'com.phunware.cme:cme:1.1.6'
+  ...
+}
+```
 
 
 
 Documentation
 ------------
 
-Documentation is included in the Documents folder in the repository as both HTML and as a .jar. You can also find the latest documentation here: http://phunware.github.io/maas-content-management-android-sdk/
+Documentation is included in the Documents folder in the repository as both HTML and via maven. You can also find the latest documentation here: http://phunware.github.io/maas-content-management-android-sdk/
 
 
 
 Overview
 -----------
 
-The MaaS Content Management SDK allows developers to fetch and manage the various pieces of data in the Content Management Engine, including containers, schemas, structure and content. MaaS Content Management spans across your entire organization, so different applications can potentially share the same content.
+The Content Management SDK allows developers to fetch and manage the various pieces of data in the Content Management Engine, including containers, schemas, structure and content. PW Content Management spans across your entire organization, so different applications can potentially share the same content.
 
 
 ### Container
@@ -78,17 +92,17 @@ Before using the CME it has to be added to the CoreSession as a module.
 
 ### Registering the keys for Core module. If you have not already registered the keys for Core, then do so.
 ````java
-//Register the Appid,accesskey,signatureKey and ecryption Key.
+//Register the Appid,accessKey,signatureKey and encryption Key.
 PwCoreSession.getInstance().registerKeys(context, Appid, Accesskey,
 				Signaturekey, Encryptionkey);
 PwCMEModule.getInstance().setModuleHttpCacheTtl(DEFAULT_HTTP_CACHE_TTL);
 ````
-The primary methods in MaaS Content Management revolve fetching, creating, updating and deleting content. You can also get structures, containers and schemas.
+The primary methods in PW Content Management revolve fetching, creating, updating and deleting content. You can also get structures, containers and schemas.
 
 ### Getting Content
 
 ````java
-	// Get a specific piece of content for the specified context, container ID and content ID. 
+	// Get a specific piece of content for the specified context, container ID and content ID.
 	// The contents are always returned as a JSONObject. It's recommended that you parse the JSONObject into a model object.
     JSONObject content = PwCMEModule.getContent(this, containerId, contentId);
 ````
@@ -96,7 +110,7 @@ The primary methods in MaaS Content Management revolve fetching, creating, updat
 ### Updating Content
 
 ````java
-	// Update content for the specified content ID, container ID and structure ID. 
+	// Update content for the specified content ID, container ID and structure ID.
 	// Any fields that are omitted will maintain their previous values.
 	  PwCMEModule.updateContent(this, contentId, newContent, structureId);
 ````
@@ -104,14 +118,14 @@ The primary methods in MaaS Content Management revolve fetching, creating, updat
 ### Creating Content
 
 ````java
-  // Add content to the specified container ID, structure ID and parent content ID. 
-	// Ideally, the new content object has all the fields specified by the structure and schema. 
+  // Add content to the specified container ID, structure ID and parent content ID.
+	// Ideally, the new content object has all the fields specified by the structure and schema.
 	// If not, the required fields will be created for you with empty values.
-	
-	  // The required parent content ID for new content needs to be linked up to any dynamic children of a structure item. 
+
+	  // The required parent content ID for new content needs to be linked up to any dynamic children of a structure item.
     PwCMEModule.addContent(this, containerId, structureId, parentId, data);
     or
-    // If no parent content exists, then the parent content ID is not required. 
+    // If no parent content exists, then the parent content ID is not required.
     // Otherwise, use the above method to properly link child elements.
     PwCMEModule.addContent(this, containerId, structureId, data);
 ````
@@ -121,7 +135,7 @@ The primary methods in MaaS Content Management revolve fetching, creating, updat
 ````java
 	// Delete content for the specified content ID as well as all content children.
     PwCMEModule.deleteContent(this, contentId, traverse);
-    
+
     or
   // Delete all content children for the specified content ID.
     PwCMEModule.deleteContentAllChildren(context, contentId);
@@ -132,10 +146,10 @@ The primary methods in MaaS Content Management revolve fetching, creating, updat
 ````java
 	// Fetch all containers.
     PwContainers containers = PwCMEModule.getContainers(this);
-    
+
   // Fetch a specific container item.
     PwContainer container = PwCMEModule.getContainer(this, containerId);
-    
+
   // Get an array of containers that match an array of tags.
     PwContainers containers = PwCMEModule.getContainers(this, anyTags, allTags);
 ````
@@ -145,10 +159,10 @@ The primary methods in MaaS Content Management revolve fetching, creating, updat
 ````java
   // Fetch all schemas.
     PwSchemas schemas = PwCMEModule.getSchemas(this);
-    
+
   // Fetch a specific schema item.
     PwSchema schema = PwCMEModule.getSchema(this, schemaId);
-    
+
   // Get an array of schemas that match an array of tags.
     PwSchemas schemas = PwCMEModule.getSchemas(this, anyTags, allTags);
 ````
@@ -156,12 +170,12 @@ The primary methods in MaaS Content Management revolve fetching, creating, updat
 ### Structure
 
 ````java
-  // Fetch a structure with the specified stucture and container ID. 
+  // Fetch a structure with the specified structure and container ID.
   // In this example, we want to traverse into all child structures but not include schema.
     withSchema = false;
     PwStructure structure = PwCMEModule.getStructure(this, structureId, containerId, depth, withSchema);
-    
-  // Fetch a structure object containing an array of structures for the specified container ID. 
+
+  // Fetch a structure object containing an array of structures for the specified container ID.
   // In this example, we want to traverse into all child structures and include schema.
     withSchema = true;
     PwStructures structures = PwCMEModule.getStructures(this, containerId, depth, withSchema);
