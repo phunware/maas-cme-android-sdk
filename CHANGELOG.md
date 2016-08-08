@@ -1,7 +1,7 @@
 CME Change Log
 ==========
 
-Version 1.1.6 *(2016-08-01)*
+Version 1.1.5 *(2016-08-01)*
 ----------------------------
  * Update from .jar to maven repo
  * Now uses updated PWCore 3.0.0
