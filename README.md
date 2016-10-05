@@ -1,7 +1,7 @@
 MaaS Content Management SDK for Android
 ================
 
-Version 1.1.5
+Version 1.1.6
 
 This is Phunware's Android SDK for the Content Management module. Visit http://maas.phunware.com/ for more details and to sign up.
 
