@@ -1,6 +1,11 @@
 CME Change Log
 ==========
 
+Version 1.1.6 *(2016-10-05)*
+----------------------------
+ * Updated Google Play Services to 9.6.1
+ * Updated Core v3.0.2
+
 Version 1.1.5 *(2016-08-01)*
 ----------------------------
  * Update from .jar to maven repo
